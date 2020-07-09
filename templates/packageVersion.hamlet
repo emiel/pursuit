@@ -8,7 +8,12 @@
   <h1 .page-title__title>#{runPackageName pkgName}
 
 <div .col.col--main>
+
   ^{versionSelector pkgName pkgVersion}
+
+  $if not isLatest
+    <a href=@{PackageR (PathPackageName pkgName)}>
+      Go to latest release
 
   <dl .grouped-list>
     <dt .grouped-list__title>Repository
